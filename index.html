@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of India NEFT/RTGS Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="no-print print-actions">
+    <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<div class="form-container">
+    
+    <!-- First Page (Split View) -->
+    <div class="split-form">
+        
+        <!-- Left Column: Customer Acknowledgment -->
+        <div class="left-col">
+            <div class="header-left">
+                <div class="logo-box">
+                    <span class="hindi-text">बैंक ऑफ़ इंडिया</span><br>
+                    <span class="english-text">Bank of India</span>
+                </div>
+                <div class="logo-letters">BOI ★</div>
+            </div>
+
+            <div class="title-left">
+                राष्ट्रीय इलेक्ट्रॉनिक निधि अंतर्गत/<br>तत्काल सकल निपटान प्रणाली <br>(एनईएफटी/आरटीजीएस)<br>
+                <span class="english-title">APPLICATION FOR NATIONAL ELECTRONIC<br>FUND TRANSFER/REAL - TIME GROSS<br>SETTLEMENT SYSTEMS (NEFT/RTGS)</span>
+            </div>
+
+            <h3 class="ack-heading">ग्राहक की पावती<br>Customer Acknowledgment</h3>
+
+            <div class="field-row-inline">
+                <span class="label">दिनांक/Date :</span> 
+                <input type="date" class="dotted-input flex-grow">
+            </div>
+
+            <p class="ack-text">
+                हम एनईएफटी/आरटीजीएस अनुदेश/<br>अनुदेशों की प्राप्ति की पावती देते हैं।<br>
+                संदर्भ संख्या/We acknowledge receipt<br>on NEFT / RTGS instructer
+            </p>
+
+            <div class="field-row">
+                <span class="label">लाभार्थी का नाम/Beneficiary's Name :</span>
+                <input type="text" class="dotted-input full-width mt-1">
+            </div>
+            
+            <div class="field-row">
+                <span class="label">खाता संख्या/Account No. :</span>
+                <div class="account-boxes mt-1" id="ack-account-boxes"></div>
+            </div>
+
+            <div class="field-row-inline mt-2">
+                <span class="label">रकम/Amount :</span> 
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-inline">
+                <span class="label">चेक संख्या/Cheque Number :</span> 
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-inline">
+                <span class="label">Reference No. .................................................</span> 
+            </div>
+
+            <div class="field-row-inline">
+                <span class="label">शाखा/Branch :</span> 
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="signature-box-left">
+                <input type="text" class="dotted-input full-width mb-1">
+                <span>बैंक के अधिकारी का नाम एवं हस्ताक्षर/</span><br>
+                <span>Name and Signature of Bank Officer.</span>
+            </div>
+
+            <div class="stamp-box-left">
+                <span>निवेदन की तारीख और समय<br>के साथ बैंक की मुहर/</span><br>
+                <span>Bank Date & Time of Request</span>
+            </div>
+        </div>
+
+
+        <!-- Right Column: Main Application -->
+        <div class="right-col">
+            <div class="header-main">
+                <div class="main-title">
+                    राष्ट्रीय इलेक्ट्रॉनिक निधि अंतर्गत/तत्काल सकल निपटान प्रणाली (एनईएफटी/आरटीजीएस)<br>
+                    <span class="english-main-title">APPLICATION FOR NATIONAL ELECTRONIC FUND TRANSFER / REAL - TIME GROSS SETTLEMENT SYSTEMS (NEFT/RTGS)</span>
+                </div>
+            </div>
+
+            <div class="top-row">
+                <div class="left-top">
+                    <span>सेवा में, / To,</span><br>
+                    <span>शाखा प्रबंधक / Branch Manager,</span>
+                    <input type="text" class="line-input" style="width: 200px; display:block; margin-top:5px;">
+                </div>
+                <div class="right-top">
+                    <div class="field-inline">
+                        <span class="label">दिनांक/Date :</span> 
+                        <input type="date" class="line-input date-input">
+                    </div>
+                    <div class="field-inline">
+                        <span class="label">पीएएन संख्या/PAN No. :</span> 
+                        <input type="text" class="line-input pan-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dear-sir">
+                महोदय, / Dear Sir,
+            </div>
+
+            <div class="para">
+                कृपया एनईएफटी/आरटीजीएस के माध्यम से रु. / Please remit through NEFT/RTGS a sum of Rs. 
+                <input type="text" class="line-input" style="width: 150px;">
+                <br>
+                (शब्दों में) रु. / (Rupees in words) : 
+                <input type="text" class="line-input" style="width: 380px;"> Only/मात्र
+            </div>
+
+            <div class="para">
+                नीचे दिये गये विवरण के अनुसार प्रेषित करें / As per details given below :
+            </div>
+
+            <div class="checkbox-row">
+                <label><input type="checkbox"> नकद/Cash</label>
+                <label><input type="checkbox"> चेक/Cheque</label>
+                <label><input type="checkbox"> मेरा/हमारा खाता नामें करें/Debit My/Our Account</label>
+            </div>
+
+            <ul class="instructions-list">
+                <li>नकद के मामले में कृपया जमा पर्ची जमा करें  I / In case of cash, please fill in the pay-in-slip.</li>
+                <li>आवेदक के द्वारा बड़े अक्षरों में भरा जाए  I / To be filled by the Applicant in CAPITAL LETTERS.</li>
+            </ul>
+
+            <!-- Applicant Details Section -->
+            <div class="section-heading">आवेदक (प्रेषक) का विवरण / DETAILS OF APPLICANT (REMITTER)</div>
+
+            <div class="field-row-flex">
+                <span class="label">खाता संख्या / Account Number :</span>
+                <div class="account-boxes flex-grow" id="main-account-boxes"></div>
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">चेक संख्या / Cheque Number :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">प्रेषित करनेवाले का नाम / Remitters Name :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">पता / Address :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">मोबाईल/अन्य संख्या / Mobile/Other Number :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+            
+            <div class="field-row-flex right-align-beneficiary">
+                <span class="label">लाभार्थी का विवरण / Details of Beneficiary</span>
+            </div>
+
+            <!-- Beneficiary Details Section -->
+            <div class="field-row-flex">
+                <span class="label">लाभार्थी का नाम / Beneficiary's Name :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">खाता संख्या / Account Number :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">खाता संख्या की पुनः पुष्टि करें /<br>Reconfirm Account Number :</span>
+                <input type="text" class="dotted-input flex-grow multi-line-label-input">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">बैंक का नाम / Bank Name :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">आईएफएससी कोड(11अंक) / IFSC Code(11 Digit) :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">शाखा का पता / Branch Address :</span>
+                <input type="text" class="dotted-input flex-grow">
+            </div>
+
+            <div class="field-row-flex">
+                <span class="label">प्रेषित करनेवाले से प्राप्त करनेवाले को जानकारी (यदि कुछ हो तो)<br>Sender to receivers information of (any) :</span>
+                <input type="text" class="dotted-input flex-grow multi-line-label-input">
+            </div>
+            
+            <div class="field-row-flex mt-2">
+                <span class="label">धर्म / Religion :</span>
+                <select class="custom-select flex-grow">
+                    <option value=""></option>
+                    <option value="Hinduism">हिन्दू / Hinduism</option>
+                    <option value="Islam">इस्लाम / Islam</option>
+                    <option value="Christianity">ईसाई धर्म / Christianity</option>
+                    <option value="Sikhism">सिख धर्म / Sikhism</option>
+                    <option value="Buddhism">बौद्ध धर्म / Buddhism</option>
+                    <option value="Jainism">जैन धर्म / Jainism</option>
+                    <option value="Other">अन्य / Other</option>
+                </select>
+                <span class="label" style="margin-left:20px;">भाषाएँ / Languages :</span>
+                <select class="custom-select flex-grow">
+                    <option value=""></option>
+                    <option value="Hindi">हिंदी / Hindi</option>
+                    <option value="English">अंग्रेजी / English</option>
+                    <option value="Marathi">मराठी / Marathi</option>
+                    <option value="Gujarati">गुजराती / Gujarati</option>
+                    <option value="Bengali">बंगाली / Bengali</option>
+                    <option value="Tamil">तमिल / Tamil</option>
+                    <option value="Telugu">तेलुगु / Telugu</option>
+                    <option value="Other">अन्य / Other</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Terms and Declaration Page -->
+    <div class="page-break"></div>
+
+    <div class="terms-page">
+        <h4>निबंधन एवं शर्तें :</h4>
+        <ul class="terms-list">
+            <li>यह अंतरण केवल एक संव्यवहार के लिए लागू है।</li>
+            <li>हमारी वेबसाईट पर दिये गये निबंधन एवं शर्तों के अनुसार निधि का अंतरण शासित होगा।</li>
+            <li>लाभार्थी का खाता संख्या तथा आईएफएससी कोड भरते समय आवश्यक सावधानी रखें।</li>
+            <li>इस सुविधा का प्रयोग कर रु. ४९,९९९ तक की राशि का नकद अंतरण किया जा सकता है।</li>
+            <li>जो हमारे ग्राहक नहीं हैं उनको से ऊपर नकद भुगतान के लिए फोटो आईडी पहचान पत्र देना होगा।</li>
+            <li>कृपया किसी भी व्यक्ति को अपना खाता विवरण / इंटरनेट बैंकिंग, युजर आईडी तथा पासवर्ड/एटीएम डेबिट कार्ड/क्रेडिट कार्ड/मोबाईल बैंकिंग /व्यक्तिगत जानकारी न दे। झूठे वादों के शिकार न बने, संदिग्ध योजनाओं से सावधान रहें।</li>
+        </ul>
+
+        <h4>TERMS AND CONDITIONS :</h4>
+        <ul class="terms-list english-terms">
+            <li>This transfer is valid for a single transaction.</li>
+            <li>The Fund transfer will be governed by the terms and condistions given on our website www.bankofindia.com.</li>
+            <li>Due care is taken while filling the beneficiary's name and IFSC Code.</li>
+            <li>Transfer of an amount up to Rs. 49,999 in cash permissible using this facility.</li>
+            <li>Photo ID proof to be given by non-customer for cash payment above rs. 49,999.</li>
+            <li>Please do not disclose your Account details internet Banking user ID and passwords/ATM Debit Card/Credit Card/Mobile Banking/Personal information to any person.</li>
+            <li>DO NOT FALL PREY TO FALSE PROMISES BEWARE OF DUBIOUS SCHEMES.</li>
+        </ul>
+
+        <h4 class="center-heading">घोषणा</h4>
+        <ul class="terms-list">
+            <li>उपर्युक्त के अनुरूप, जो भी लागू हो, मेरा खाते नामे कर प्रभार वसूलने के लिए मैं/हम बैंक ऑफ इंडिया को अधिकृत करते हैं।</li>
+            <li>मैं/हम समझते हैं कि आरबीआई के परिपत्र दिनांक १४ अक्तूबर, २०१० के अनुसार इलेक्ट्रॉनिक मोड के माध्यम से निधि के अंतरण का संव्यवहार आरम्भ करते समय दिये गये लाभार्थी के खाता संख्या के आधार पर ही किया जायेगा। जमा देने के लिए नाम को मापदण्ड के रूप में विचार नहीं किया जाएगा।</li>
+            <li>हम यह समझते है कि यह सुविधा केवल चयनित स्थानों पर तथा आरबीआई द्वारा दी जा जा रही इलेक्ट्रॉनिक निधि अंतरण सुविधा के अंतर्गत कवर किये गये बैंको में ही उपलब्ध हैं।</li>
+        </ul>
+
+        <h4 class="center-heading text-xl">DECLARATION</h4>
+        <ul class="terms-list english-terms">
+            <li>I/We authorize BANK OF INDIA to recover charges as may be applicable by debiting my account as mentioned above.</li>
+            <li>I/We understand that as per the RBI circular dated October 14, 2010 transfer of funds through electronic mode will be executed only on the basis of the amount No. of the beneficiary provided while initiating the transaction. Name will not be considered as criteria for providing credit.</li>
+            <li>I/We understand that this facility is available only at select locations and Banks covered under Electronic Fund Transfer facility offered by RBI.</li>
+        </ul>
+
+        <div class="signature-section">
+            <h4 class="center-heading signature-heading">ग्राहक के हस्ताक्षर<br>Customer Signature (s)</h4>
+            
+            <div class="signature-boxes">
+                <div class="sign-box">
+                    <input type="text" class="dotted-input full-width mb-1">
+                    नाम / Name<br>
+                    (प्राथमिक आवेदक)<br>
+                    (Primary Applicant)
+                </div>
+                <div class="sign-box">
+                    <input type="text" class="dotted-input full-width mb-1">
+                    नाम / Name<br>
+                    (संयुक्त आवेदक १)<br>
+                    (Joint Applicant 1)
+                </div>
+                <div class="sign-box">
+                    <input type="text" class="dotted-input full-width mb-1">
+                    नाम / Name<br>
+                    (संयुक्त आवेदक २)<br>
+                    (Joint Applicant 2)
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
